@@ -66,14 +66,14 @@ void heapSort(int arr[], int n) {
         heapify(arr, n, i);
     }
 
-    // Extract elements from heap one by one
+    // Extract elements
     for (int i = n - 1; i > 0; i--) {
-        // Move current root to end
+        // Swap current to root
         int temp = arr[0];
         arr[0] = arr[i];
         arr[i] = temp;
 
-        // Call max heapify on the reduced heap
+        // Call heapify function
         heapify(arr, i, 0);
     }
 }
